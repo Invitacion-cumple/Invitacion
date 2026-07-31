@@ -1,6 +1,3 @@
-/* ==========================================
-   CONFIGURACIÓN GENERAL & MODO CELULAR (MARGEN DELGADO)
-   ========================================== */
 * {
     margin: 0;
     padding: 0;
@@ -12,9 +9,7 @@ html, body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    /* Fondo crema neutro para resaltar la tarjeta en celular */
     background: linear-gradient(180deg, #F5F6F2 0%, #EAECE8 100%);
-    /* Margen mínimo y elegante para no desperdiciar espacio */
     padding: clamp(4px, 1vh, 8px);
     display: flex;
     justify-content: center;
@@ -25,7 +20,6 @@ html, body {
 .invitation-wrapper {
     width: 100%;
     height: 100%;
-    /* En celular se expande al 100% de la pantalla disponible */
     max-width: 100%;
     max-height: 100%;
     display: flex;
@@ -34,15 +28,11 @@ html, body {
     animation: aparecerTarjeta 0.8s ease-out;
 }
 
-/* ==========================================
-   TARJETA EN CELULAR (REDONDEO Y SOMBRA LIGERA)
-   ========================================== */
 .marco-acuarela-card {
     width: 100%;
     height: 100%;
     background: #FFFDF9;
     border-radius: 24px;
-    /* Sombra ligera y limpia, sin anillos blancos */
     box-shadow: 0 6px 18px rgba(16, 44, 87, 0.10);
     display: flex;
     justify-content: center;
@@ -51,9 +41,6 @@ html, body {
     overflow: hidden;
 }
 
-/* ==========================================
-   EXCLUSIVO PARA COMPUTADORA (PANTALLAS >= 768px)
-   ========================================== */
 @media (min-width: 768px) {
     html, body {
         padding: clamp(15px, 3vh, 30px);
@@ -69,14 +56,10 @@ html, body {
 
     .marco-acuarela-card {
         border-radius: 35px;
-        /* OPCIÓN 1: Sombra flotante limpia, centrada y sin mancha oscura abajo */
         box-shadow: 0 8px 25px rgba(16, 44, 87, 0.18);
     }
 }
 
-/* ==========================================
-   ANIMACIONES KEYFRAMES
-   ========================================== */
 @keyframes aparecerTarjeta {
     from {
         opacity: 0;
@@ -115,9 +98,6 @@ html, body {
     }
 }
 
-/* ==========================================
-   ELEMENTOS DE FONDO Y PERSONAJES
-   ========================================== */
 .img-fondo-marco {
     position: absolute;
     top: 0;
@@ -154,9 +134,6 @@ html, body {
     animation: flotarPajarito 3s ease-in-out infinite;
 }
 
-/* ==========================================
-   ZONA SEGURA: CENTRO DE LA ACUARELA
-   ========================================== */
 .zona-segura-ovalo {
     width: 86%;
     height: 100%;
@@ -181,9 +158,6 @@ html, body {
     gap: clamp(8px, 1.8vh, 15px);
 }
 
-/* ==========================================
-   TEXTOS CON ALTO CONTRASTE
-   ========================================== */
 .header-texto {
     width: 100%;
 }
@@ -224,9 +198,6 @@ html, body {
     text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
 }
 
-/* ==========================================
-   DETALLES DE FECHA Y LUGAR
-   ========================================== */
 .details-container {
     width: 100%;
     background: transparent !important;
@@ -271,9 +242,6 @@ html, body {
     background: rgba(139, 94, 0, 0.35);
 }
 
-/* ==========================================
-   TEMPORIZADOR ALEGRE
-   ========================================== */
 .countdown-section {
     width: 100%;
 }
@@ -317,9 +285,6 @@ html, body {
     margin-top: 2px;
 }
 
-/* ==========================================
-   BOTÓN UBICACIÓN ANIMADO
-   ========================================== */
 .btn-ubicacion {
     background: linear-gradient(135deg, #EF233C 0%, #C80036 100%);
     color: #FFFFFF;
@@ -348,9 +313,6 @@ html, body {
     0 1px 0 #8C0024;
 }
 
-/* ==========================================
-   AJUSTES ADICIONALES PARA PANTALLAS PEQUEÑAS
-   ========================================== */
 @media (max-width: 500px) {
     .img-princesa-decorativa {
         height: clamp(140px, 28dvh, 180px);

@@ -1,5 +1,3 @@
-// Configura la fecha de la fiesta: 17 de Agosto de 2026 a las 3:00 PM (15:00 hrs)
-// En JavaScript los meses van de 0 a 11 (7 = Agosto)[cite: 9]
 const fechaEvento = new Date(2026, 7, 22, 15, 0, 0).getTime();
 
 const countdownInterval = setInterval(() => {
@@ -33,7 +31,6 @@ const countdownInterval = setInterval(() => {
     }
 }, 1000);
 
-// Abre Google Maps con la dirección al presionar el botón[cite: 9]
 const btnUbicacion = document.querySelector(".btn-ubicacion");
 if (btnUbicacion) {
     btnUbicacion.addEventListener("click", () => {
