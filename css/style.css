@@ -1,0 +1,382 @@
+/* ==========================================
+   CONFIGURACIÓN GENERAL & MODO CELULAR (MARGEN DELGADO)
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* Fondo crema neutro para resaltar la tarjeta en celular */
+    background: linear-gradient(180deg, #F5F6F2 0%, #EAECE8 100%);
+    /* Margen mínimo y elegante para no desperdiciar espacio */
+    padding: clamp(4px, 1vh, 8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.invitation-wrapper {
+    width: 100%;
+    height: 100%;
+    /* En celular se expande al 100% de la pantalla disponible */
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: aparecerTarjeta 0.8s ease-out;
+}
+
+/* ==========================================
+   TARJETA EN CELULAR (REDONDEO Y SOMBRA LIGERA)
+   ========================================== */
+.marco-acuarela-card {
+    width: 100%;
+    height: 100%;
+    background: #FFFDF9;
+    border-radius: 24px;
+    /* Sombra ligera y limpia, sin anillos blancos */
+    box-shadow: 0 6px 18px rgba(16, 44, 87, 0.10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ==========================================
+   EXCLUSIVO PARA COMPUTADORA (PANTALLAS >= 768px)
+   ========================================== */
+@media (min-width: 768px) {
+    html, body {
+        padding: clamp(15px, 3vh, 30px);
+        background:
+                radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, rgba(16, 44, 40, 0.55) 100%),
+                url('../img/marco.png') center/cover no-repeat fixed;
+    }
+
+    .invitation-wrapper {
+        max-width: 460px;
+        max-height: 760px;
+    }
+
+    .marco-acuarela-card {
+        border-radius: 35px;
+        /* OPCIÓN 1: Sombra flotante limpia, centrada y sin mancha oscura abajo */
+        box-shadow: 0 8px 25px rgba(16, 44, 87, 0.18);
+    }
+}
+
+/* ==========================================
+   ANIMACIONES KEYFRAMES
+   ========================================== */
+@keyframes aparecerTarjeta {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes flotarPajarito {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-8px) rotate(-4deg);
+    }
+}
+
+@keyframes respirarPrincesa {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes pulsoBoton {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.04);
+    }
+}
+
+/* ==========================================
+   ELEMENTOS DE FONDO Y PERSONAJES
+   ========================================== */
+.img-fondo-marco {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    z-index: 1;
+}
+
+.img-princesa-decorativa {
+    position: absolute;
+    bottom: 3%;
+    right: 2%;
+    height: clamp(170px, 34%, 240px);
+    width: auto;
+    z-index: 2;
+    pointer-events: none;
+    filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.9))
+    drop-shadow(2px 6px 10px rgba(16, 44, 87, 0.35));
+    animation: respirarPrincesa 4s ease-in-out infinite;
+}
+
+.img-pajarito-decorativo {
+    position: absolute;
+    top: 31%;
+    left: 3%;
+    height: clamp(65px, 13%, 95px);
+    width: auto;
+    z-index: 2;
+    pointer-events: none;
+    filter: drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.95))
+    drop-shadow(1px 4px 8px rgba(16, 44, 87, 0.28));
+    animation: flotarPajarito 3s ease-in-out infinite;
+}
+
+/* ==========================================
+   ZONA SEGURA: CENTRO DE LA ACUARELA
+   ========================================== */
+.zona-segura-ovalo {
+    width: 86%;
+    height: 100%;
+    padding-top: 34%;
+    padding-bottom: 14%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.contenido-libre {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: clamp(8px, 1.8vh, 15px);
+}
+
+/* ==========================================
+   TEXTOS CON ALTO CONTRASTE
+   ========================================== */
+.header-texto {
+    width: 100%;
+}
+
+.pre-title {
+    color: #102C57;
+    font-size: clamp(0.72rem, 1.35vh, 0.86rem);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 1px;
+}
+
+.title {
+    font-family: 'Baloo 2', cursive;
+    color: #C80036;
+    font-size: clamp(2.2rem, 4.8vh, 3.1rem);
+    font-weight: 800;
+    line-height: 0.88;
+    margin: 2px 0;
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 1),
+    0 0 12px rgba(255, 255, 255, 0.95);
+}
+
+.subtitle-princesa {
+    color: #8B5E00;
+    font-size: clamp(0.76rem, 1.4vh, 0.95rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 2px;
+}
+
+.name {
+    color: #102C57;
+    font-size: clamp(1.05rem, 2vh, 1.35rem);
+    font-weight: 700;
+    line-height: 1.1;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* ==========================================
+   DETALLES DE FECHA Y LUGAR
+   ========================================== */
+.details-container {
+    width: 100%;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 8px;
+}
+
+.detail-box {
+    flex: 1;
+}
+
+.detail-label {
+    display: block;
+    font-size: clamp(0.72rem, 1.3vh, 0.82rem);
+    font-weight: 700;
+    color: #C80036;
+    margin-bottom: 2px;
+}
+
+.detail-main {
+    color: #102C57;
+    font-size: clamp(0.8rem, 1.45vh, 0.92rem);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.detail-sub {
+    color: #222222;
+    font-size: clamp(0.7rem, 1.25vh, 0.8rem);
+    margin-top: 2px;
+    font-weight: 600;
+}
+
+.detail-divider {
+    width: 1.5px;
+    height: 34px;
+    background: rgba(139, 94, 0, 0.35);
+}
+
+/* ==========================================
+   TEMPORIZADOR ALEGRE
+   ========================================== */
+.countdown-section {
+    width: 100%;
+}
+
+.countdown-title {
+    font-size: clamp(0.7rem, 1.25vh, 0.8rem);
+    font-weight: 700;
+    color: #102C57;
+    margin-bottom: clamp(4px, 0.8vh, 6px);
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: clamp(6px, 1.8vw, 12px);
+}
+
+.time-box {
+    background: #FFFFFF;
+    border: 2px solid #FFD166;
+    border-bottom: 3px solid #E5A93C;
+    border-radius: 12px;
+    padding: clamp(3px, 0.7vh, 5px) clamp(6px, 1.5vw, 12px);
+    min-width: clamp(48px, 10.5vw, 58px);
+    box-shadow: 0 4px 10px rgba(16, 44, 87, 0.1);
+}
+
+.time-box span {
+    font-family: 'Baloo 2', cursive;
+    font-size: clamp(1.1rem, 2.2vh, 1.35rem);
+    font-weight: 800;
+    color: #C80036;
+    line-height: 1;
+    display: block;
+}
+
+.time-box p {
+    font-size: clamp(0.56rem, 1vh, 0.66rem);
+    font-weight: 700;
+    color: #102C57;
+    margin-top: 2px;
+}
+
+/* ==========================================
+   BOTÓN UBICACIÓN ANIMADO
+   ========================================== */
+.btn-ubicacion {
+    background: linear-gradient(135deg, #EF233C 0%, #C80036 100%);
+    color: #FFFFFF;
+    border: 2px solid #FFD166;
+    padding: clamp(8px, 1.4vh, 12px) clamp(18px, 4vw, 26px);
+    font-size: clamp(0.8rem, 1.4vh, 0.92rem);
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 14px rgba(200, 0, 54, 0.35),
+    0 3px 0 #8C0024;
+    transition: all 0.2s ease;
+    animation: pulsoBoton 2.5s infinite ease-in-out;
+}
+
+.btn-ubicacion:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 7px 18px rgba(200, 0, 54, 0.45),
+    0 5px 0 #8C0024;
+    background: linear-gradient(135deg, #FF3B56 0%, #C80036 100%);
+}
+
+.btn-ubicacion:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 5px rgba(200, 0, 54, 0.35),
+    0 1px 0 #8C0024;
+}
+
+/* ==========================================
+   AJUSTES ADICIONALES PARA PANTALLAS PEQUEÑAS
+   ========================================== */
+@media (max-width: 500px) {
+    .img-princesa-decorativa {
+        height: clamp(140px, 28dvh, 180px);
+        bottom: 2%;
+        right: 1%;
+    }
+
+    .img-pajarito-decorativo {
+        height: clamp(55px, 11dvh, 75px);
+        top: 30%;
+        left: 2%;
+    }
+
+    .zona-segura-ovalo {
+        width: 86%;
+        padding-top: 35%;
+        padding-bottom: 12%;
+    }
+
+    .details-container {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .detail-divider {
+        width: 60%;
+        height: 1px;
+    }
+}
