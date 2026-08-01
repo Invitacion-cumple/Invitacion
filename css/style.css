@@ -41,25 +41,6 @@ html, body {
     overflow: hidden;
 }
 
-@media (min-width: 768px) {
-    html, body {
-        padding: clamp(15px, 3vh, 30px);
-        background:
-                radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, rgba(16, 44, 40, 0.55) 100%),
-                url('../img/marco.png') center/cover no-repeat fixed;
-    }
-
-    .invitation-wrapper {
-        max-width: 460px;
-        max-height: 760px;
-    }
-
-    .marco-acuarela-card {
-        border-radius: 35px;
-        box-shadow: 0 8px 25px rgba(16, 44, 87, 0.18);
-    }
-}
-
 @keyframes aparecerTarjeta {
     from {
         opacity: 0;
@@ -112,7 +93,7 @@ html, body {
     position: absolute;
     bottom: 3%;
     right: 2%;
-    height: clamp(170px, 34%, 240px);
+    height: clamp(150px, 30%, 240px);
     width: auto;
     z-index: 2;
     pointer-events: none;
@@ -125,7 +106,7 @@ html, body {
     position: absolute;
     top: 31%;
     left: 3%;
-    height: clamp(65px, 13%, 95px);
+    height: clamp(55px, 12%, 95px);
     width: auto;
     z-index: 2;
     pointer-events: none;
@@ -134,11 +115,12 @@ html, body {
     animation: flotarPajarito 3s ease-in-out infinite;
 }
 
+/* ZONA SEGURA BASE */
 .zona-segura-ovalo {
     width: 86%;
     height: 100%;
-    padding-top: 36%;
-    padding-bottom: 12%;
+    padding-top: 35%;
+    padding-bottom: 11%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,7 +137,7 @@ html, body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: clamp(5px, 1.3vh, 11px);
+    gap: clamp(4px, 1.1vh, 9px);
 }
 
 .header-texto {
@@ -164,7 +146,7 @@ html, body {
 
 .pre-title {
     color: #102C57;
-    font-size: clamp(0.70rem, 1.3vh, 0.84rem);
+    font-size: clamp(0.64rem, 1.6vh, 0.82rem);
     font-weight: 700;
     letter-spacing: 0.5px;
     margin-bottom: 1px;
@@ -173,7 +155,7 @@ html, body {
 .title {
     font-family: 'Baloo 2', cursive;
     color: #C80036;
-    font-size: clamp(2.3rem, 5vh, 3.2rem);
+    font-size: clamp(2.1rem, 4.8vh, 3.1rem);
     font-weight: 800;
     line-height: 0.88;
     margin: 2px 0;
@@ -183,16 +165,16 @@ html, body {
 
 .subtitle-princesa {
     color: #8B5E00;
-    font-size: clamp(0.78rem, 1.45vh, 0.95rem);
+    font-size: clamp(0.72rem, 1.35vh, 0.92rem);
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.1px;
     margin-bottom: 2px;
 }
 
 .name {
     color: #102C57;
-    font-size: clamp(1.15rem, 2.2vh, 1.45rem);
+    font-size: clamp(1.05rem, 2.1vh, 1.42rem);
     font-weight: 700;
     line-height: 1.1;
     text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
@@ -205,13 +187,12 @@ html, body {
 
 .date-text {
     color: #102C57;
-    font-size: clamp(0.88rem, 1.6vh, 1.05rem);
+    font-size: clamp(0.82rem, 1.55vh, 1.04rem);
     font-weight: 800;
     letter-spacing: 0.3px;
     text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9);
 }
 
-/* MARGEN DE SEGURIDAD PARA QUE NO TOQUE LAS RAMAS */
 .details-container {
     width: 88%;
     max-width: 350px;
@@ -239,7 +220,7 @@ html, body {
 
 .detail-label {
     display: block;
-    font-size: clamp(0.76rem, 1.35vh, 0.88rem);
+    font-size: clamp(0.72rem, 1.3vh, 0.86rem);
     font-weight: 700;
     color: #C80036;
     margin-bottom: 2px;
@@ -247,14 +228,14 @@ html, body {
 
 .detail-main {
     color: #102C57;
-    font-size: clamp(0.76rem, 1.35vh, 0.88rem);
+    font-size: clamp(0.72rem, 1.3vh, 0.86rem);
     font-weight: 700;
     line-height: 1.18;
 }
 
 .detail-sub {
     color: #222222;
-    font-size: clamp(0.70rem, 1.25vh, 0.80rem);
+    font-size: clamp(0.66rem, 1.2vh, 0.78rem);
     margin-top: 2px;
     font-weight: 600;
     line-height: 1.15;
@@ -262,7 +243,7 @@ html, body {
 
 .detail-divider {
     width: 1.5px;
-    height: 38px;
+    height: 36px;
     background: rgba(139, 94, 0, 0.35);
     flex-shrink: 0;
 }
@@ -272,10 +253,10 @@ html, body {
 }
 
 .countdown-title {
-    font-size: clamp(0.72rem, 1.3vh, 0.84rem);
+    font-size: clamp(0.68rem, 1.25vh, 0.82rem);
     font-weight: 700;
     color: #102C57;
-    margin-bottom: clamp(4px, 0.8vh, 6px);
+    margin-bottom: clamp(3px, 0.7vh, 5px);
 }
 
 .countdown-timer {
@@ -290,13 +271,13 @@ html, body {
     border-bottom: 3px solid #E5A93C;
     border-radius: 12px;
     padding: clamp(3px, 0.7vh, 5px) clamp(6px, 1.5vw, 12px);
-    min-width: clamp(48px, 10.5vw, 58px);
+    min-width: clamp(46px, 10.2vw, 56px);
     box-shadow: 0 4px 10px rgba(16, 44, 87, 0.1);
 }
 
 .time-box span {
     font-family: 'Baloo 2', cursive;
-    font-size: clamp(1.1rem, 2.2vh, 1.35rem);
+    font-size: clamp(1.05rem, 2.1vh, 1.32rem);
     font-weight: 800;
     color: #C80036;
     line-height: 1;
@@ -304,7 +285,7 @@ html, body {
 }
 
 .time-box p {
-    font-size: clamp(0.56rem, 1vh, 0.66rem);
+    font-size: clamp(0.54rem, 0.95vh, 0.64rem);
     font-weight: 700;
     color: #102C57;
     margin-top: 2px;
@@ -323,7 +304,7 @@ html, body {
     color: #FFFFFF;
     border: 2px solid #FFD166;
     padding: clamp(7px, 1.2vh, 10px) clamp(14px, 3vw, 20px);
-    font-size: clamp(0.75rem, 1.3vh, 0.88rem);
+    font-size: clamp(0.74rem, 1.25vh, 0.86rem);
     font-weight: 700;
     border-radius: 50px;
     cursor: pointer;
@@ -346,44 +327,81 @@ html, body {
     0 1px 0 #8C0024;
 }
 
+/* ========================================================= */
+/* COMPUTADORAS Y PANTALLAS GRANDES (INTACTO SIN ENCIMARSE)  */
+/* ========================================================= */
+@media (min-width: 768px) {
+    html, body {
+        padding: clamp(15px, 3vh, 30px);
+        background:
+                radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, rgba(16, 44, 40, 0.55) 100%),
+                url('../img/marco.png') center/cover no-repeat fixed;
+    }
+
+    .invitation-wrapper {
+        max-width: 460px;
+        max-height: 760px;
+    }
+
+    .marco-acuarela-card {
+        border-radius: 35px;
+        box-shadow: 0 8px 25px rgba(16, 44, 87, 0.18);
+    }
+
+    /* REGLA DE ORO PARA PC: El texto jamás toca el moño rojo */
+    .zona-segura-ovalo {
+        padding-top: 36%;
+        padding-bottom: 12%;
+    }
+
+    .contenido-libre {
+        justify-content: center;
+        gap: 9px;
+    }
+}
+
+/* ========================================================= */
+/* CELULARES Y PANTALLAS CHICAS (SIN DESBORDARSE)            */
+/* ========================================================= */
 @media (max-width: 500px) {
     .img-princesa-decorativa {
-        height: clamp(140px, 28dvh, 180px);
+        height: clamp(130px, 26dvh, 170px);
         bottom: 2%;
         right: 1%;
     }
 
     .img-pajarito-decorativo {
-        height: clamp(55px, 11dvh, 75px);
+        height: clamp(50px, 10dvh, 70px);
         top: 30%;
         left: 2%;
     }
 
     .zona-segura-ovalo {
-        width: 86%;
-        padding-top: 37%;
-        padding-bottom: 11%;
+        width: 88%;
+        padding-top: 35%;
+        padding-bottom: 9%;
     }
 
     .details-container {
-        width: 92%;
+        width: 95%;
         flex-direction: column;
-        gap: 6px;
+        gap: 4px;
     }
 
     .detail-box {
         width: 100%;
         max-width: 100%;
-        padding: 0 12px;
+        padding: 0 8px;
     }
 
     .detail-divider {
-        width: 60%;
+        width: 50%;
         height: 1px;
+        margin: 1px 0;
     }
 
     .buttons-container {
-        gap: 8px;
+        gap: 6px;
     }
 
     .btn-ubicacion {
