@@ -137,8 +137,8 @@ html, body {
 .zona-segura-ovalo {
     width: 86%;
     height: 100%;
-    padding-top: 34%;
-    padding-bottom: 14%;
+    padding-top: 36%;
+    padding-bottom: 12%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,7 +155,7 @@ html, body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: clamp(8px, 1.8vh, 15px);
+    gap: clamp(5px, 1.3vh, 11px);
 }
 
 .header-texto {
@@ -164,7 +164,7 @@ html, body {
 
 .pre-title {
     color: #102C57;
-    font-size: clamp(0.72rem, 1.35vh, 0.86rem);
+    font-size: clamp(0.70rem, 1.3vh, 0.84rem);
     font-weight: 700;
     letter-spacing: 0.5px;
     margin-bottom: 1px;
@@ -173,7 +173,7 @@ html, body {
 .title {
     font-family: 'Baloo 2', cursive;
     color: #C80036;
-    font-size: clamp(2.2rem, 4.8vh, 3.1rem);
+    font-size: clamp(2.3rem, 5vh, 3.2rem);
     font-weight: 800;
     line-height: 0.88;
     margin: 2px 0;
@@ -183,7 +183,7 @@ html, body {
 
 .subtitle-princesa {
     color: #8B5E00;
-    font-size: clamp(0.76rem, 1.4vh, 0.95rem);
+    font-size: clamp(0.78rem, 1.45vh, 0.95rem);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.2px;
@@ -192,31 +192,54 @@ html, body {
 
 .name {
     color: #102C57;
-    font-size: clamp(1.05rem, 2vh, 1.35rem);
+    font-size: clamp(1.15rem, 2.2vh, 1.45rem);
     font-weight: 700;
     line-height: 1.1;
     text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
 }
 
-.details-container {
+.date-header {
     width: 100%;
+    margin: 1px 0;
+}
+
+.date-text {
+    color: #102C57;
+    font-size: clamp(0.88rem, 1.6vh, 1.05rem);
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9);
+}
+
+/* MARGEN DE SEGURIDAD PARA QUE NO TOQUE LAS RAMAS */
+.details-container {
+    width: 88%;
+    max-width: 350px;
+    margin: 0 auto;
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    gap: 8px;
 }
 
 .detail-box {
-    flex: 1;
+    flex: 1 1 50%;
+    width: 50%;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 8px;
 }
 
 .detail-label {
     display: block;
-    font-size: clamp(0.72rem, 1.3vh, 0.82rem);
+    font-size: clamp(0.76rem, 1.35vh, 0.88rem);
     font-weight: 700;
     color: #C80036;
     margin-bottom: 2px;
@@ -224,22 +247,24 @@ html, body {
 
 .detail-main {
     color: #102C57;
-    font-size: clamp(0.8rem, 1.45vh, 0.92rem);
+    font-size: clamp(0.76rem, 1.35vh, 0.88rem);
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.18;
 }
 
 .detail-sub {
     color: #222222;
-    font-size: clamp(0.7rem, 1.25vh, 0.8rem);
+    font-size: clamp(0.70rem, 1.25vh, 0.80rem);
     margin-top: 2px;
     font-weight: 600;
+    line-height: 1.15;
 }
 
 .detail-divider {
     width: 1.5px;
-    height: 34px;
+    height: 38px;
     background: rgba(139, 94, 0, 0.35);
+    flex-shrink: 0;
 }
 
 .countdown-section {
@@ -247,7 +272,7 @@ html, body {
 }
 
 .countdown-title {
-    font-size: clamp(0.7rem, 1.25vh, 0.8rem);
+    font-size: clamp(0.72rem, 1.3vh, 0.84rem);
     font-weight: 700;
     color: #102C57;
     margin-bottom: clamp(4px, 0.8vh, 6px);
@@ -285,12 +310,20 @@ html, body {
     margin-top: 2px;
 }
 
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    gap: clamp(8px, 2vw, 14px);
+    justify-content: center;
+    width: 100%;
+}
+
 .btn-ubicacion {
     background: linear-gradient(135deg, #EF233C 0%, #C80036 100%);
     color: #FFFFFF;
     border: 2px solid #FFD166;
-    padding: clamp(8px, 1.4vh, 12px) clamp(18px, 4vw, 26px);
-    font-size: clamp(0.8rem, 1.4vh, 0.92rem);
+    padding: clamp(7px, 1.2vh, 10px) clamp(14px, 3vw, 20px);
+    font-size: clamp(0.75rem, 1.3vh, 0.88rem);
     font-weight: 700;
     border-radius: 50px;
     cursor: pointer;
@@ -328,17 +361,32 @@ html, body {
 
     .zona-segura-ovalo {
         width: 86%;
-        padding-top: 35%;
-        padding-bottom: 12%;
+        padding-top: 37%;
+        padding-bottom: 11%;
     }
 
     .details-container {
+        width: 92%;
         flex-direction: column;
         gap: 6px;
+    }
+
+    .detail-box {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 12px;
     }
 
     .detail-divider {
         width: 60%;
         height: 1px;
+    }
+
+    .buttons-container {
+        gap: 8px;
+    }
+
+    .btn-ubicacion {
+        padding: clamp(6px, 1vh, 8px) clamp(12px, 2.8vw, 16px);
     }
 }

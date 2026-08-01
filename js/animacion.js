@@ -1,4 +1,4 @@
-const fechaEvento = new Date(2026, 7, 22, 15, 0, 0).getTime();
+const fechaEvento = new Date(2026, 7, 22, 12, 0, 0).getTime();
 
 const countdownInterval = setInterval(() => {
     const ahora = new Date().getTime();
@@ -31,10 +31,11 @@ const countdownInterval = setInterval(() => {
     }
 }, 1000);
 
-const btnUbicacion = document.querySelector(".btn-ubicacion");
-if (btnUbicacion) {
-    btnUbicacion.addEventListener("click", () => {
-        const direccionEncoded = encodeURIComponent("Calle Calvario 28, Atlacomulco, Cuernavaca, Morelos");
-        window.open(`https://www.google.com/maps/search/?api=1&query=${direccionEncoded}`, "_blank");
+// Botón de la Fiesta
+const btnFiesta = document.querySelector(".btn-fiesta");
+if (btnFiesta) {
+    btnFiesta.addEventListener("click", () => {
+        const direccionFiesta = encodeURIComponent("Calle Calvario 28, Atlacomulco, Cuernavaca, Morelos");
+        window.open(`https://www.google.com/maps/search/?api=1&query=${direccionFiesta}`, "_blank");
     });
 }
