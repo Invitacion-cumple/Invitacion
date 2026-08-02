@@ -31,11 +31,29 @@ const countdownInterval = setInterval(() => {
     }
 }, 1000);
 
-// Botón de la Fiesta
 const btnFiesta = document.querySelector(".btn-fiesta");
 if (btnFiesta) {
     btnFiesta.addEventListener("click", () => {
         const direccionFiesta = encodeURIComponent("Calle Calvario 28, Atlacomulco, Cuernavaca, Morelos");
         window.open(`https://www.google.com/maps/search/?api=1&query=${direccionFiesta}`, "_blank");
+    });
+}
+
+const audioControl = document.getElementById('audio-control');
+const bgAudio = document.getElementById('bg-audio');
+const iconMuted = document.getElementById('icon-muted');
+const iconUnmuted = document.getElementById('icon-unmuted');
+
+if (audioControl && bgAudio) {
+    audioControl.addEventListener('click', () => {
+        if (bgAudio.paused) {
+            bgAudio.play();
+            iconMuted.style.display = 'none';
+            iconUnmuted.style.display = 'block';
+        } else {
+            bgAudio.pause();
+            iconMuted.style.display = 'block';
+            iconUnmuted.style.display = 'none';
+        }
     });
 }
